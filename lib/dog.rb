@@ -1,11 +1,11 @@
 require "pry"
-# binding.pry
+binding.pry
 class Dog
   @@all = []
   
   def initialize(name)
     @name = name
-    @@all << name
+    @@all << self
   end
   
   def self.all
@@ -13,8 +13,9 @@ class Dog
   end
   
   def self.print_all
-    @@all
-    
+    @@all.each do |dog|
+      binding.pry
+    end
   end
   
   def self.clear_all
