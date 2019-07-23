@@ -3,9 +3,9 @@ binding.pry
 class Dog
   @@all = []
   
-  def initialize(puppy)
-    @puppy = puppy
-    @@all << self
+  def initialize(name)
+    @name = name
+    @@all << name
   end
   
   def self.all
@@ -13,8 +13,7 @@ class Dog
   end
   
   def self.print_all
-    @@all.each do |dog|
-      binding.pry
+    @@all
     end
   end
   
