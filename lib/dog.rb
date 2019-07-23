@@ -1,5 +1,3 @@
-require "pry"
-# binding.pry
 class Dog
   @@all = []
   
